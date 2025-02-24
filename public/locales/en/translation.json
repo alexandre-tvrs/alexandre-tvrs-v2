@@ -1,0 +1,12 @@
+{
+    "home": {
+        "title": "Welcome to my portfolio!",
+        "subtitle": "I'm Alexandre Tavares and I'm a",
+        "typed": [
+            "Software Engineer",
+            "DevOps Engineer",
+            "Data Engineer",
+            "Machine Learning Engineer"
+        ]
+    }
+}
