@@ -4,7 +4,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
@@ -37,7 +36,7 @@ export const Navbar = () => {
           </Link>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
+          {siteConfig().navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
                 className={clsx(
@@ -73,25 +72,17 @@ export const Navbar = () => {
           </button>
         </NavbarItem>
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} title="Twitter">
+          <Link isExternal href={siteConfig().links.twitter} title="Twitter">
             <TwitterIcon className="text-default-500" />
           </Link>
-          <Link isExternal href={siteConfig.links.discord} title="Discord">
+          <Link isExternal href={siteConfig().links.discord} title="Discord">
             <DiscordIcon className="text-default-500" />
           </Link>
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
+          <Link isExternal href={siteConfig().links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
         </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
       </NavbarContent>
     </HeroUINavbar>
   );

@@ -1,4 +1,10 @@
 {
+    "site": {
+        "nav": {
+            "home": "Home",
+            "about": "About"
+        }
+    },
     "home": {
         "title": "Welcome to my portfolio!",
         "subtitle": "I'm Alexandre Tavares and I'm a",
@@ -7,6 +13,10 @@
             "DevOps Engineer",
             "Data Engineer",
             "Machine Learning Engineer"
-        ]
+        ],
+        "about": {
+            "title": "About me",
+            "description": "I'm a software engineer with experience in software development, DevOps, data engineering, and machine learning engineering. Currently, I'm working as a software engineer at <a href='https://www.avenuecode.com/'>Avenue Code</a>."
+        }
     }
 }
