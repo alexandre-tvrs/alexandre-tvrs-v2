@@ -37,7 +37,7 @@ export const Navbar = () => {
         <div className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig().navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <Link
+              <a
                 className={clsx(
                   linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium"
@@ -46,7 +46,7 @@ export const Navbar = () => {
                 href={item.href}
               >
                 {item.label}
-              </Link>
+              </a>
             </NavbarItem>
           ))}
         </div>
