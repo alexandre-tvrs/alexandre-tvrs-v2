@@ -2,21 +2,135 @@
     "site": {
         "nav": {
             "home": "Home",
-            "about": "About"
+            "experience": "Professional Experience",
+            "projects": "Projects",
+            "contact": "Contact"
         }
     },
     "home": {
         "title": "Welcome to my portfolio!",
-        "subtitle": "I'm Alexandre Tavares and I'm a",
+        "subtitle": "I am Alexandre Tavares and I am a",
         "typed": [
             "Software Engineer",
             "DevOps Engineer",
             "Data Engineer",
             "Machine Learning Engineer"
         ],
-        "about": {
-            "title": "About me",
-            "description": "I'm a software engineer with experience in software development, DevOps, data engineering, and machine learning engineering. Currently, I'm working as a software engineer at <a href='https://www.avenuecode.com/'>Avenue Code</a>."
+        "quote": {
+            "text": "'Technology moves the world.'",
+            "author": "Steve Jobs"
         }
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "experiences": [
+            {
+                "title": "Full Cycle Engineer",
+                "company": "Kuará Capital",
+                "date": "2024 - Present",
+                "description": "Development of software solutions for the financial sector, focusing on process optimization and automation. Implementation of data pipelines and system integration. Development of applications using Python, Data Science, Machine Learning, and DevOps."
+            },
+            {
+                "title": "Software Engineer",
+                "company": "KONIA Tecnologia",
+                "date": "2022 - 2024",
+                "description": "Development of software solutions for technology consulting, using Python, Ruby, C#, JavaScript, and TypeScript."
+            },
+            {
+                "title": "DevOps Engineer",
+                "company": "KONIA Tecnologia",
+                "date": "2021 - 2022",
+                "description": "Implementation of DevOps solutions for technology consulting, using Docker, Kubernetes, Azure, AWS, and GCP. Development of CI/CD pipelines and process automation."
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "projects": [
+            {
+                "title": "ChatTCC",
+                "media": "",
+                "status": "Completed",
+                "description": "A communication system for students and teachers, featuring chat, file sharing, and task management, specifically designed for organizing thesis work. Developed with Django and React, integrating APIs and a PostgreSQL database.",
+                "technologies": [
+                    "Django",
+                    "React",
+                    "PostgreSQL",
+                    "Docker"
+                ],
+                "links": [
+                    {
+                        "link": "https://github.com/alexandre-tvrs/backend-tcc",
+                        "text": "Backend Repository"
+                    },
+                    {
+                        "link": "https://github.com/alexandre-tvrs/frontend-chat",
+                        "text": "Frontend Repository"
+                    }
+                ]
+            },
+            {
+                "title": "Wrath of Elements",
+                "media": "",
+                "status": "Completed",
+                "description": "A turn-based card game where players can choose different elements and abilities to defeat their opponents. Developed in C# with GameMaker, featuring 2D graphics and custom animations.",
+                "technologies": [
+                    "C#",
+                    "GameMaker",
+                    "Unity"
+                ],
+                "links": [
+                    {
+                        "link": "https://github.com/alexandre-tvrs/wrath-of-elements",
+                        "text": "Game Repository"
+                    }
+                ]
+            },
+            {
+                "title": "ProjectENV",
+                "media": "",
+                "status": "In development",
+                "description": "A web system for managing local projects, featuring virtual environment creation, dependency management, and integration with CI/CD tools. Developed in Python, with a React web interface and MongoDB database.",
+                "technologies": [
+                    "Python",
+                    "React",
+                    "MongoDB",
+                    "Docker"
+                ],
+                "links": [
+                    {
+                        "link": "https://github.com/alexandre-tvrs/-api-project.env",
+                        "text": "Backend Repository"
+                    }
+                ]
+            },
+            {
+                "title": "KotaroBOT",
+                "media": "",
+                "status": "In development",
+                "description": "A Discord bot for music playback, server management, and integration with external APIs. Developed in Python, with integration using the Discord API and support for multiple servers.",
+                "technologies": [
+                    "Python",
+                    "Discord API",
+                    "FFmpeg"
+                ],
+                "links": [
+                    {
+                        "link": "https://github.com/alexandre-tvrs/kotaro-bot",
+                        "text": "Bot Repository"
+                    }
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "description": "If you're interested in discussing a job opportunity or collaboration, feel free to reach out to me via email or LinkedIn.",
+        "email": "contact@alexandretavares.dev",
+        "linkedin": "https://www.linkedin.com/in/dev-alexandre-tavares/"
+    },
+    "footer": {
+        "description": "Built by Alexandre Tavares, using React, HeroUI, and i18next.",
+        "name": "Alexandre Tavares"
     }
 }
