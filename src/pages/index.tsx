@@ -2,6 +2,10 @@ import DefaultLayout from "@/layouts/default";
 import { useTranslation } from "react-i18next";
 import { Image } from "@heroui/image";
 import { ReactTyped } from "react-typed";
+import { Experience } from "@/components/experience";
+import { Projects } from "@/components/projects";
+import { Footer } from "@/components/footer";
+import { Contact } from "@/components/contact";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -38,10 +42,23 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10" id="about">
-        <h2 className="text-3xl font-bold">{t("home.about.title")}</h2>
-        <p className="text-lg">{t("home.about.description")}</p>
+    {/* aumentar o espaçamento a seção de quote */}
+      <section className="flex flex-col items-center justify-center gap-2 py-8 md:py-72" id="quote">
+        <p className="text-3xl font-bold italic text-center max-w-2xl">
+          {t("home.quote.text")}
+        </p>
+        <p className="text-md italic text-center max-w-2xl">
+          {t("home.quote.author")}
+        </p>
       </section>
+
+      <Experience />
+
+      <Projects />
+
+      <Contact />
+      
+      <Footer />
 
     </DefaultLayout>
   );

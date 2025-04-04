@@ -8,11 +8,13 @@ export const siteConfig = () => {
   const description = t("site.description");
   const navItems = [
     { label: t("site.nav.home"), href: "/" },
-    { label: t("site.nav.about"), href: "/#about" },
+    { label: t("site.nav.experience"), href: "#experience" },
+    { label: t("site.nav.projects"), href: "#projects" },
+    { label: t("site.nav.contact"), href: "#contact" },
+    
   ];
   const links = {
     github: "https://github.com/alexandre-tvrs",
-    twitter: "https://twitter.com/4iexand",
     discord: "https://discord.gg/fR8NjnGy3v",
   };
 
