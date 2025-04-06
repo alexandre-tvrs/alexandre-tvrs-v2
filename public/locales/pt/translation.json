@@ -125,9 +125,10 @@
     },
     "contact": {
         "title": "Entre em contato",
-        "description": "Se você está interessado em discutir uma oportunidade de trabalho ou colaboração, entre em contato comigo através do meu e-mail ou LinkedIn.",
+        "description": "Se você está interessado em discutir uma oportunidade de trabalho ou colaboração, entre em contato comigo através do meu e-mail, LinkedIn ou WhatsApp.",
         "email": "contact@alexandretavares.dev",
-        "linkedin": "https://www.linkedin.com/in/dev-alexandre-tavares/"
+        "linkedin": "https://www.linkedin.com/in/dev-alexandre-tavares/",
+        "whatsapp": "https://api.whatsapp.com/send?phone=551152862755"
     },
     "footer": {
         "description": "Feito por Alexandre Tavares, usando React, HeroUI e i18next.",

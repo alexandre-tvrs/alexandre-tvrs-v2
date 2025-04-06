@@ -125,9 +125,11 @@
     },
     "contact": {
         "title": "Get in Touch",
-        "description": "If you're interested in discussing a job opportunity or collaboration, feel free to reach out to me via email or LinkedIn.",
+        "description": "If you're interested in discussing a job opportunity or collaboration, feel free to reach out to me via email, LinkedIn, or WhatsApp.",
         "email": "contact@alexandretavares.dev",
-        "linkedin": "https://www.linkedin.com/in/dev-alexandre-tavares/"
+        "linkedin": "https://www.linkedin.com/in/dev-alexandre-tavares/",
+        "whatsapp_number": "+55 11 5286-2755",
+        "whatsapp_link": "https://api.whatsapp.com/send?phone=551152862755"
     },
     "footer": {
         "description": "Built by Alexandre Tavares, using React, HeroUI, and i18next.",

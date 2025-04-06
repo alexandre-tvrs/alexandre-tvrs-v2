@@ -4,4 +4,10 @@
 
 html {
     scroll-behavior: smooth;
+    position: relative;
+}
+
+nav {
+    position: fixed !important;
+    top: 0 !important;
 }

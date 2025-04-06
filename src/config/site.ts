@@ -7,7 +7,7 @@ export const siteConfig = () => {
   const name = t("site.name");
   const description = t("site.description");
   const navItems = [
-    { label: t("site.nav.home"), href: "/" },
+    { label: t("site.nav.home"), href: "#header" },
     { label: t("site.nav.experience"), href: "#experience" },
     { label: t("site.nav.projects"), href: "#projects" },
     { label: t("site.nav.contact"), href: "#contact" },

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Mail, Linkedin } from "lucide-react";
+import { WhatsappIcon } from "./icons";
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -27,6 +28,15 @@ export const Contact = () => {
         >
           <Linkedin size={18} className="flex-shrink-0" />
           <span className="truncate">{t("contact.linkedin")}</span>
+        </a>
+        <a
+          href={t("contact.whatsapp_link")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-sm md:text-base w-full sm:w-auto"
+        >
+          <WhatsappIcon size={18} className="flex-shrink-0" />
+          <span className="truncate">{t("contact.whatsapp_number")}</span>
         </a>
       </div>
     </section>
