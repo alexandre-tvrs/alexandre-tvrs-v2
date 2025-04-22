@@ -133,5 +133,11 @@
     "footer": {
         "description": "Feito por Alexandre Tavares, usando React, HeroUI e i18next.",
         "name": "Alexandre Tavares"
+    },
+
+    "my_love": {
+        "title": "Para meu amor, Maria Rita",
+        "subtitle": "Decidado para você",
+        "description": "Você é a razão pela qual eu me esforço todos os dias. Sua presença ilumina minha vida e me inspira a ser uma pessoa melhor. Te amo muito!"
     }
 }

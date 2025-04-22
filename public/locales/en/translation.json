@@ -134,5 +134,12 @@
     "footer": {
         "description": "Built by Alexandre Tavares, using React, HeroUI, and i18next.",
         "name": "Alexandre Tavares"
+    },
+
+
+    "my_love": {
+        "title": "For my love, Maria Rita",
+        "subtitle": "Dedicated to you",
+        "description": "My love, you are the light of my life. Your smile brightens my days and your love fills my heart with joy. I am grateful for every moment we share together. You are my everything, and I will always cherish you."
     }
 }
