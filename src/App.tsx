@@ -3,7 +3,6 @@ import { usePrefs } from "./hooks/usePrefs";
 import { BackgroundFX } from "./components/BackgroundFX";
 import { TopBar } from "./components/TopBar";
 import { Terminal } from "./components/Terminal/Terminal";
-import { TweaksPanel } from "./components/Tweaks/TweaksPanel";
 import { Hero } from "./components/sections/Hero";
 import { SignalStrip } from "./components/sections/SignalStrip";
 import { About } from "./components/sections/About";
@@ -127,20 +126,6 @@ export default function App() {
           </div>
         </div>
       )}
-
-      <TweaksPanel
-        lang={prefs.lang}
-        mode={prefs.mode}
-        setMode={setMode}
-        langVal={prefs.lang}
-        setLang={setLang}
-        theme={prefs.theme}
-        setTheme={setTheme}
-        fxIntensity={prefs.fxIntensity}
-        setFxIntensity={(v) => setPref("fxIntensity", v)}
-        showSignal={prefs.showSignal}
-        setShowSignal={(v) => setPref("showSignal", v)}
-      />
     </>
   );
 }
