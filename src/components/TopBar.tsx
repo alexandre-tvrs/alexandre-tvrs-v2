@@ -10,9 +10,13 @@ interface TopBarProps {
   setMode: (mode: "pure" | "hybrid") => void;
 }
 
-function getUTCTime() {
-  const now = new Date();
-  return `${String(now.getUTCHours()).padStart(2, "0")}:${String(now.getUTCMinutes()).padStart(2, "0")} UTC`;
+function getSPTime() {
+  return new Date().toLocaleTimeString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }) + " UTC-3";
 }
 
 const NAV_ITEMS = {
@@ -37,10 +41,10 @@ const NAV_ITEMS = {
 };
 
 export function TopBar({ lang, setLang, theme, setTheme, mode, setMode }: TopBarProps) {
-  const [time, setTime] = useState(getUTCTime);
+  const [time, setTime] = useState(getSPTime);
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getUTCTime()), 60_000);
+    const id = setInterval(() => setTime(getSPTime()), 60_000);
     return () => clearInterval(id);
   }, []);
 
