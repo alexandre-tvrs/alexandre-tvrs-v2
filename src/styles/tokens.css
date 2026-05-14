@@ -1,0 +1,42 @@
+:root {
+  --bg: #070707;
+  --bg-elev: #0d0d0e;
+  --bg-card: #111114;
+  --line: #1d1d22;
+  --line-bright: #2a2a32;
+  --fg: #e8e8ea;
+  --fg-dim: #8a8a92;
+  --fg-mute: #55555c;
+  --neon: #ff6b35;
+  --neon-soft: rgba(255, 107, 53, 0.18);
+  --neon-glow: rgba(255, 107, 53, 0.45);
+  --green: #00ff9d;
+  --green-soft: rgba(0, 255, 157, 0.14);
+  --cyan: #66e0ff;
+  --magenta: #ff5dd9;
+  --yellow: #f5d76e;
+  --red: #ff4d6d;
+  --scanline: rgba(255, 255, 255, 0.018);
+
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-display: "Space Grotesk", -apple-system, sans-serif;
+  --fx: 1;
+}
+
+[data-theme="light"] {
+  --bg: #f5f3ee;
+  --bg-elev: #ecebe5;
+  --bg-card: #ffffff;
+  --line: #d8d4ca;
+  --line-bright: #b9b3a4;
+  --fg: #1a1a1a;
+  --fg-dim: #555049;
+  --fg-mute: #8a857c;
+  --neon: #d94f1a;
+  --neon-soft: rgba(217, 79, 26, 0.12);
+  --neon-glow: rgba(217, 79, 26, 0.28);
+  --green: #057a4a;
+  --green-soft: rgba(5, 122, 74, 0.1);
+  --cyan: #156d8a;
+  --scanline: rgba(0, 0, 0, 0.015);
+}

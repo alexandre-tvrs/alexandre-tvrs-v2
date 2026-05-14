@@ -1,18 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import "@fontsource/jetbrains-mono";
+import "@fontsource/space-grotesk";
+import "./styles/tokens.css";
+import "./styles/reset.css";
+import "./styles/fx.css";
+import "./styles/layout.css";
+import "./styles/terminal.css";
+import "./styles/sections.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
 
-import App from "./App.tsx";
-import { Provider } from "./provider.tsx";
-import "@/styles/globals.css";
-import "./i18n.ts";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Provider>
-        <App />
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>,
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
