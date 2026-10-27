@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url)),read=name=>fs.readFileSync(path.join(root,name),'utf8');
 // A quiet portrait uses the exact geometry and palette of the flying dragon.
@@ -30,7 +31,13 @@ vm.runInContext(read('dragon-portrait.js'),context);
 vm.runInContext(read('portfolio.js').split('// Native anchors')[0]+'})();',context);
 let html=read('layout.html');
 for(const[id,block]of Object.entries(blocks))html=html.replace(new RegExp('(<(?:div|ol)[^>]*id="'+id+'"[^>]*>)(</(?:div|ol)>)'),(_,open,close)=>open+block.innerHTML+close);
-fs.writeFileSync(path.join(root,'index.html'),html);
+// Fingerprint browser assets so a returning visitor cannot mix deployments.
+const deployedHtml=html.replace(/(href|src)="([^"?#]+\.(?:css|js|svg))"/g,(match,attribute,file)=>{
+ const asset=path.join(root,file);if(!fs.existsSync(asset))return match;
+ const version=createHash('sha256').update(fs.readFileSync(asset)).digest('hex').slice(0,12);
+ return attribute+'="'+file+'?v='+version+'"';
+});
+fs.writeFileSync(path.join(root,'index.html'),deployedHtml);
 html=html.replace('href="favicon.svg"','href="data:image/svg+xml,'+encodeURIComponent(favicon)+'"');
 for(const name of ['fonts.css','study.css','village.css','portfolio.css'])html=html.replace('<link rel="stylesheet" href="'+name+'">','<style>'+read(name)+'</style>');
 for(const name of ['content.js','dragon-portrait.js','portfolio.js','dragon.js','village.js'])html=html.replace('<script src="'+name+'"></script>','<script>'+read(name)+'</script>');
