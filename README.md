@@ -5,6 +5,10 @@ characters and English portfolio content. The home fills one screen; navigation
 opens Projects, About, Experience, DATA&DEV and Contact. Characters open details
 in accessible dialogs. The animation supports pausing and reduced motion.
 
+Desktop navigation scrolls away with the page. Mobile uses a bottom bar with
+a central village button; More contains DATA&DEV and Contact. The bar reserves
+space below content and supports the device safe area.
+
 ## Build and deployment
 
 Requires Node.js 20 or newer. No npm dependencies are needed.

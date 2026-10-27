@@ -41,9 +41,14 @@ document.getElementById('modal-close').addEventListener('click',()=>modal.close(
 modal.addEventListener('click',e=>{if(e.target===modal){const b=modal.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)modal.close()}});
 modal.addEventListener('close',()=>{modal.dataset.character='';opener?.focus({preventScroll:true})});
 const routes=['village','projects','about','experience','datadev','contact'];
+const moreMenu=document.getElementById('mobile-more-menu'),moreButton=document.getElementById('mobile-more');
+moreMenu.addEventListener('toggle',()=>moreButton.setAttribute('aria-expanded',String(moreMenu.matches(':popover-open'))));
+matchMedia('(min-width: 701px)').addEventListener('change',e=>{if(e.matches&&moreMenu.matches(':popover-open'))moreMenu.hidePopover()});
 function route(){
  let name=location.hash.replace(/^#\/?/,'').split('/')[0]||'village';const aliases={vila:'village',projetos:'projects',sobre:'about',carreira:'experience',arquitetura:'village',architecture:'village',contato:'contact'};if(aliases[name]){name=aliases[name];history.replaceState(null,'','#/'+name)}if(!routes.includes(name))name='village';
  if(modal.open)modal.close();document.body.dataset.route=name;
+ if(moreMenu.matches(':popover-open'))moreMenu.hidePopover();
+ moreButton.classList.toggle('active',['datadev','contact'].includes(name));
  for(const section of document.querySelectorAll('.route-page'))section.hidden=section.dataset.route!==name;
  document.querySelector('footer').hidden=name==='village';
  for(const link of document.querySelectorAll('nav a')){if(link.hash==='#/'+name)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')}
@@ -53,4 +58,3 @@ function route(){
 }
 window.addEventListener('hashchange',route);route();
 })();
-
