@@ -25,3 +25,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated ASCII portfolio assets
+src/index.html
+src/abrir-portfolio.html
+src/dragon-portrait.js
+src/favicon.svg
