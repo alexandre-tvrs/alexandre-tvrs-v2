@@ -1,6 +1,6 @@
 window.PORTFOLIO = {
  name:'Alexandre Tavares', role:'Full Cycle Software Engineer', location:'São Paulo, Brazil · UTC−3',
- email:'contact@alexandretavares.dev', github:'https://github.com/alexandre-tvrs', linkedin:'https://www.linkedin.com/in/dev-alexandre-tavares/',
+ email:'alexandre@datadev.tech', github:'https://github.com/alexandre-tvrs', linkedin:'https://www.linkedin.com/in/dev-alexandre-tavares/',
  about:[
   'I am a full cycle software engineer with 5+ years in tech. My focus is machine learning, computer vision and software development: building the models, APIs and applications that turn ideas into working systems, from edge devices to production.',
   'At ZBW, I develop computer-vision systems for cattle biometrics, spanning multi-camera capture, Hailo-8 edge inference, GPU ML pipelines and full-stack applications. I work with PyTorch, YOLO, SAM2, Python, TypeScript and Rust.',
